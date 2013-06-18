@@ -11,6 +11,7 @@ It uses regular imap login for gmail, because oauth2 and phonegap can't access g
 Tested on Android phones, 2.3+.
 
 TODO:
+
 1. Dynamic city name for weather forecast. (Maybe network or gps location to get it automatically)
 
 2. Better mail login.
