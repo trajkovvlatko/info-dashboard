@@ -1,0 +1,228 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:19px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    color: #363636;
+}
+
+input{
+	height: 30px;
+}
+
+/* Portrait layout (default) */
+.app {
+    position:absolute;             /* position in the center of the screen */
+    width:100%;                   /* text area width */
+    padding: 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+    	position: absolute;
+        background-position:left center;
+        width:100%;
+    	padding: 0px;
+    }
+}
+
+h1 {
+    font-size:25px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:13px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+.boxes{
+	display: none;
+	padding: 20px;
+}
+
+.user-form, .settings-box{
+	display: none;
+	padding: 50px;
+	margin: 20px;
+}
+
+.user-form p{
+	clear: both;
+}
+
+.user-form .label{
+	width: 15%;
+	display: inline-block;
+	padding-right: 20px;
+}
+
+.user-form .label{
+	width: 20%;
+}
+
+.user-form .email{
+	width: 40%;	
+}
+
+.user-form .email-password{
+	width: 70%;	
+}
+
+.user-form .save-email{
+	width: 102%;
+	height: 50px;
+	padding: 0;
+	margin-left: -5px;
+}
+
+.mail{
+	background:url(../img/gmail1.png) no-repeat center top;
+}
+
+.weather{
+	background:url(../img/weather1.png) no-repeat center top;
+}
+
+.news{
+	background:url(../img/rss1.png) no-repeat center top;
+} 
+.loader{
+	background:url(../img/ajax-loader.gif) no-repeat center top;
+	height: 50px;
+	width: 50px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.box{ 
+	padding: 10px;	
+	border 1px solid gray;
+	background-color:rgba(255,255,255,0.5);
+	margin-bottom: 10px;
+}
+
+.item{
+	min-height: 30px;
+	margin-bottom: 10px;
+}
+
+.header{
+	height: 20px;
+	width: 100%;
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color:rgba(255,255,255,0.8);
+	font-weight: bold;
+}
+
+.header span{
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+
+.hidden{
+	display: none;
+}
+
+.box-header{
+	height: 24px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	padding-top: 10px;
+	padding-left: 17px;
+	padding-bottom: 10px;
+	background-color:rgba(255,255,255,0.8);	
+	font-weight: bold;
+}
+
+.box-header span{
+	float: right;
+	padding-right: 17px;	
+}
+
+.rss{
+	height: 50px;
+	width: 65%;	
+}
+
+.logout, .login, .save-rss{
+	clear: both;
+	width: 100%;
+	height: 50px;	
+}
+
+.news-text{
+	position: fixed;
+	height: 80%;
+	width: 70%;
+	left: 20px;
+	top: 20px;
+	padding: 50px;
+	background-color:rgba(255,255,255,0.9);
+	display: none;
+	overflow: auto;
+}
+
+.news-text-content{
+	position: relative;
+}

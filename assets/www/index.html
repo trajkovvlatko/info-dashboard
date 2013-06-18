@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Dailies</title>
+    </head>
+    <body>
+		<div class="app">
+        	<div class="header">
+       			<span class="dashboard">Dashboard</span>
+       			<span class="settings">Settings</span>
+       		</div>
+        	<div class="boxes">
+        		<div class="box-header">Weather<span>Show more</span></div>
+	        	<div class="weather box"></div>
+        		<div class="box-header">News<span>Show more</span></div>
+	        	<div class="news box"></div>
+	        	<div class="box-header">Mail<span>Show more</span></div>
+	        	<div class="mail box"></div>
+        		<div class="news-text"><div class="news-text-content"></div></div>
+        
+        	</div>
+        	<div class="user-form box">
+        		<p>
+        			<span class="label">Email:</span>
+        			<input class="email" type="text" />
+        			<span>@gmail.com</span>
+        		</p>
+        		<p>
+        			<span class="label">Password: </span>
+        			<input class="email-password" type="password" value="" />
+        		</p>
+        		<p>
+        			<input class="save-email" value="Save" type="button" />
+        		</p>
+        	</div>
+        	<div class="settings-box box">
+       			<p>
+        			<span class="label">Email account: </span>
+        			<span class="current-email">Not logged in.</span>
+        		</p>
+        		<p>
+        			<input type="button" value="Logout" class="logout" />
+        		</p>
+        		<hr width="95%" />
+        		<p>
+        			<span class="label">News RSS feed: </span>
+        			<select class="rss">
+        				<option value="google_news">Google News</option>
+        				<option value="reuters">Reuters</option>
+        				<option value="bbc">BBC</option>
+        				<option value="time_mk">Time.mk</option>
+        			</select>
+        		</p>
+        		<p>
+        			<input type="button" value="Save" class="save-rss" />
+        		</p>
+	        </div>
+        </div>
+        <script type="text/javascript" src="cordova-2.7.0.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/cards.js"></script>
+        <script type="text/javascript" src="js/user.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
