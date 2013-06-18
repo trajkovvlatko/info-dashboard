@@ -1,0 +1,4 @@
+info-dashboard
+==============
+
+Info dashboard
